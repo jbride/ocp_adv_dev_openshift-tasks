@@ -4,7 +4,10 @@
     <mirror>
       <id>Nexus</id>
       <name>Nexus Public Mirror</name>
-      <url>http://nexus3-jb-cicd.apps.127.0.0.1.nip.io/repository/maven-all-public/</url>
+
+      <!-- Example:  mvn -s nexus_settings.xml clean package -DskipTests -DnexusHostUrl=http://nexus3-jb-cicd.apps.127.0.0.1.nip.io -->
+      <url>${nexusHostUrl}/repository/maven-all-public/</url>
+
       <mirrorOf>*</mirrorOf>
     </mirror>
   </mirrors>
