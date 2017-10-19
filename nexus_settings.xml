@@ -5,6 +5,7 @@
       <id>Nexus</id>
       <name>Nexus Public Mirror</name>
 
+      <!-- https://maven.apache.org/settings.html -->
       <!-- Example:  mvn -s nexus_settings.xml clean package -DskipTests -DnexusHostUrl=http://nexus3-jb-cicd.apps.127.0.0.1.nip.io -->
       <url>${nexusHostUrl}/repository/maven-all-public/</url>
 
