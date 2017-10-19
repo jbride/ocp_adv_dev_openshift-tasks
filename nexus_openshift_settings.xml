@@ -4,7 +4,10 @@
     <mirror>
       <id>Nexus</id>
       <name>Nexus Public Mirror</name>
-      <url>http://nexus3.jb-cicd.svc.cluster.local:8081/repository/maven-all-public/</url>
+
+      <!-- specify nexusHostUrl as a java system property when invoking Maven -->
+      <url>${nexustHostUrl}/repository/maven-all-public/</url>
+
       <mirrorOf>*</mirrorOf>
     </mirror>
   </mirrors>
