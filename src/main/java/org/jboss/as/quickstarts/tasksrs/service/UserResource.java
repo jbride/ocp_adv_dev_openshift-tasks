@@ -12,6 +12,8 @@ import javax.ws.rs.Produces;
 import org.jboss.as.quickstarts.tasksrs.model.User;
 import org.jboss.as.quickstarts.tasksrs.model.UserDao;
 
+import javax.annotation.PostConstruct;
+
 /**
  * A JAX-RS resource for exposing REST endpoints for User manipulation
  */
@@ -20,6 +22,11 @@ import org.jboss.as.quickstarts.tasksrs.model.UserDao;
 public class UserResource {
     @Inject
     private UserDao userDao;
+
+    @PostConstruct
+    public void startup() {
+        System.out.println("UserResource.startup() ");
+    }
 
     @GET
     @Path("/")

@@ -40,6 +40,8 @@ import org.jboss.as.quickstarts.tasksrs.model.TaskDao;
 import org.jboss.as.quickstarts.tasksrs.model.User;
 import org.jboss.as.quickstarts.tasksrs.model.UserDao;
 
+import javax.annotation.PostConstruct;
+
 /**
  * A JAX-RS resource for exposing REST endpoints for Task manipulation
  */
@@ -50,6 +52,11 @@ public class TaskResource {
 
     @Inject
     private TaskDao taskDao;
+
+    @PostConstruct
+    public void startup() {
+        System.out.println("TaskResource.startup() ");
+    }
 
     @POST
     @Path("tasks/{title}")
