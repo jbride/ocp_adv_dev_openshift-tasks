@@ -8,6 +8,8 @@
 DEPLOY_DIR=$JBOSS_HOME/standalone/deployments
 APP_NAME=ROOT.war
 
+env
+
 echo "deploying artifact found at $WAR_FILE_LOCATION to $DEPLOY_DIR/$APP_NAME"
 curl --insecure -L -o $DEPLOY_DIR/$APP_NAME $WAR_FILE_LOCATION
 
